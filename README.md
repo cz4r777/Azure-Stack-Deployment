@@ -11,55 +11,77 @@ markdown
 This document provides a clean, resume‑ready 2D ASCII topology diagram representing the minimal Azure prototype environment used for demonstrating identity, endpoint management, and cloud infrastructure capability.
 
 Code
+## Modern Cloud Endpoint Architecture (Public‑Safe)
+
                           Azure Region
-                    (Australia Southeast)
+                        (US West 3)
 
                              │
                              ▼
-                   Public Internet (RDP/SSH)
+                   Secure Cloud Access Layer
                              │
                              ▼
-                 Public IP Address (Static, Basic)
+                 Public IP Address (Static)
+                 - Standard inbound access controls
                              │
                              ▼
-                 Azure Load Balancer (Basic SKU)
-                 • Inbound NAT Rule:
-                   - Port 50001 → 3389 (RDP)
-                 • No Firewall
-                 • No NAT Gateway
+                 Azure Load Balancer
+                 - Basic inbound mapping for management access
                              │
                              ▼
-                 Virtual Machine (B1s)
-                 • Windows or Ubuntu
-                 • Entra ID Join / Hybrid Join
-                 • Intune-managed
+                 Virtual Machine (General Purpose)
+                 - Modern Windows OS
+                 - Cloud identity joined
+                 - Centrally managed
+                 - Security baseline applied
+                 - Endpoint protection enabled
                              │
                              ▼
                  Network Interface (NIC)
-                 • Private IP only
-                 • NSG with minimal inbound rules
+                 - Private addressing
+                 - Network security applied
                              │
                              ▼
                  Virtual Network (VNet)
-                 • 10.0.0.0/16
-                 • mgmt-subnet (10.0.0.0/24)
+                 - Private address space
+                 - Segmented subnet design
+                 - Network security applied
                              │
                              ▼
-                 Microsoft Entra ID (Tenant)
-                 • Identity backbone
-                 • Authentication
+                 Cloud Identity Platform
+                 - Authentication
+                 - Device identity
+                 - Access control
+                 - Conditional Access
                              │
                              ▼
-                 Microsoft Intune
-                 • Device compliance
-                 • Configuration profiles
-                 • App deployment
+                 Microsoft 365 Platform
+                 - Cloud productivity services
+                 - File storage and collaboration
+                 - Device and application management
+                 - Security and compliance capabilities
                              │
                              ▼
-                 Microsoft 365 Services
-                 • Exchange Online
-                 • SharePoint / OneDrive
-                 • Teams
+                 Unified Endpoint Management
+                 - Windows device enrollment
+                 - Mobile device enrollment
+                 - Configuration and compliance
+                 - Application deployment
+                 - Security integration
+                             │
+                             ▼
+                 Endpoint Security Platform
+                 - Threat detection and response
+                 - Device risk scoring
+                 - Security posture insights
+                             │
+                             ▼
+                 Mobile Device Platform (Android Enterprise)
+                 - Work Profile separation
+                 - Managed application deployment
+                 - Corporate data protection
+                 - Privacy‑preserving BYOD model
+
 markdown
 This topology reflects a minimal-cost, production-pattern Azure environment suitable for demonstrating modern cloud identity, endpoint management, and infrastructure skills.
 ============================================
