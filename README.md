@@ -1,4 +1,4 @@
-# Azure-Prototype-Environment
+# Azure-Projuction-Environment
 Azure Prototype Topology Diagram
 
 ============================================
@@ -6,7 +6,7 @@ Azure Prototype Topology Diagram
 (Pure Markdown — GitHub‑ready)
 ============================================
 markdown
-# Azure Prototype Topology Diagram
+# Azure Production Topology Diagram
 
 This document provides a clean, resume‑ready 2D ASCII topology diagram representing the minimal Azure prototype environment used for demonstrating identity, endpoint management, and cloud infrastructure capability.
 
